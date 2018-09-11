@@ -34,6 +34,7 @@ public class CourseController {
 
     @RequestMapping(value = "/view",method = RequestMethod.GET)
     public String viewCourse(@RequestParam("courseId") Integer courseId, Model model){
+        //System.out.println(courseId);
         log.debug("In viewCourse,courseId={}",courseId);
         Course course=courseService.getCourseById(courseId);
         model.addAttribute(course);
